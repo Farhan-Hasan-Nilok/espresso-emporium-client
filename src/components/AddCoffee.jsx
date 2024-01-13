@@ -15,25 +15,25 @@ const AddCoffee = () => {
         const photo = form.photo.value;
         const newCoffee = { name, chefName, supplier, price, taste, details, photo }
 
-        fetch('http://localhost:3000/add-coffee', {
+        fetch('https://espresso-emporium-server-rho.vercel.app/add-coffee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
             },
             body: JSON.stringify(newCoffee)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if (data.insertedId){
-                Swal.fire({
-                    title: "Successfull!",
-                    text: "New Coffee Added!",
-                    icon: "success"
-                });
-            }
-            form.reset();
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Successfull!",
+                        text: "New Coffee Added!",
+                        icon: "success"
+                    });
+                }
+                form.reset();
+            })
     }
     return (
         <div>

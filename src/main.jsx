@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: 'view/:id',
     element: <ViewCoffee />,
-    loader: ({ params }) => fetch(`http://localhost:3000/display-coffee/${params.id}`)
+    loader: ({ params }) => fetch(`https://espresso-emporium-server-rho.vercel.app/display-coffee/${params.id}`)
   },
   {
     path: 'edit/:id',

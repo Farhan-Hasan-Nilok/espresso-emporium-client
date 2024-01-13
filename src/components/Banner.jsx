@@ -4,7 +4,7 @@ import beans from '../assets/images/icons/3.png'
 import can from '../assets/images/icons/4.png'
 const Banner = () => {
     return (
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[#ECEAE3] p-10 gap-5">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[#ECEAE3] p-10 md:place-items-center gap-5">
             <div>
                 <img src={cup} alt="" />
                 <h3 className='text-2xl text-[#331A15]'>Awesome Aroma</h3>

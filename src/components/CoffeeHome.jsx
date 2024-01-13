@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 const ShowCoffee = () => {
     const [displayCoffees, setDisplayCoffees] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/display-coffee')
+        fetch('https://espresso-emporium-server-rho.vercel.app/display-coffee')
             .then(res => res.json())
             .then(data => setDisplayCoffees(data))
     }, [])
@@ -30,7 +30,7 @@ const ShowCoffee = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/delete-coffee/${id}`, {
+                fetch(`https://espresso-emporium-server-rho.vercel.app/delete-coffee/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

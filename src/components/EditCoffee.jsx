@@ -17,13 +17,13 @@ const EditCoffee = () => {
         const photo = form.photo.value;
         const newCoffee = { name, chefName, supplier, price, taste, details, photo }
 
-        fetch(`http://localhost:3000/edit-coffee/${location.state?.coffeeData?._id}`, {
+        fetch(`https://espresso-emporium-server-rho.vercel.app/edit-coffee/${location.state?.coffeeData?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
             },
             body: JSON.stringify(newCoffee)
-         })
+        })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
